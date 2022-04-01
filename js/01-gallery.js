@@ -29,12 +29,12 @@ galleryEl.addEventListener("click", (event) => {
     instance.show();
 
     galleryEl.addEventListener("keydown", closeWindow);
-
-    function closeWindow(event) {
-      if (event.code === "Escape") {
-        instance.close();
-        galleryEl.removeEventListener("keydown", closeWindow);
-      }
-    }
   }
 });
+
+function closeWindow(event) {
+  if (event.code === "Escape") {
+    instance.close();
+    galleryEl.removeEventListener("keydown", closeWindow);
+  }
+}
